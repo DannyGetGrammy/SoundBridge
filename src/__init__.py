@@ -1,0 +1,1 @@
+"""SoundBridge core package."""

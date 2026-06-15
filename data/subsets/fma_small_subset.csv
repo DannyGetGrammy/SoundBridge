@@ -1,0 +1,81 @@
+track_id,raw_path,genre,title,artist,album,split,subset
+1482,data/raw/fma_small/001/001482.mp3,Electronic,Reindeer Dance,Rainbro,Vectors,training,small
+3573,data/raw/fma_small/003/003573.mp3,Electronic,Piggled,Dan Deacon,Live at WFMU on OCDJ's Show on 7/23/2003,training,small
+4519,data/raw/fma_small/004/004519.mp3,Electronic,Golden,High Places,Live at WFMU on Marty McSorely's Show on 10/28/2008,training,small
+4520,data/raw/fma_small/004/004520.mp3,Electronic,From Stardust to Sentience,High Places,Live at WFMU on Marty McSorely's Show on 10/28/2008,training,small
+4521,data/raw/fma_small/004/004521.mp3,Electronic,Namer,High Places,Live at WFMU on Marty McSorely's Show on 10/28/2008,training,small
+4522,data/raw/fma_small/004/004522.mp3,Electronic,Oceanus,High Places,Live at WFMU on Marty McSorely's Show on 10/28/2008,training,small
+7011,data/raw/fma_small/007/007011.mp3,Electronic,in sleepy electricity,junior85,sleepy,validation,small
+11206,data/raw/fma_small/011/011206.mp3,Electronic,Elles,Music Komite,netBloc Vol. 20: music to accompany the world traveller,training,small
+11262,data/raw/fma_small/011/011262.mp3,Electronic,Wataridori 2,Cornelius,The WIRED CD: Rip. Sample. Mash. Share.,training,small
+11942,data/raw/fma_small/011/011942.mp3,Electronic,Rage Against Death,Stouffi The Stouves,netBloc Vol. 21: opening your ears with jamendo,training,small
+148,data/raw/fma_small/000/000148.mp3,Experimental,Blackout 2,Contradiction,Contradiction,validation,small
+424,data/raw/fma_small/000/000424.mp3,Experimental,The Ambient Honky,Brian Joseph Davis,The Definitive Host,training,small
+615,data/raw/fma_small/000/000615.mp3,Experimental,"Immaterial, side A",EKG,Immaterial,training,small
+897,data/raw/fma_small/000/000897.mp3,Experimental,02,Infinite Body,White Hymn,training,small
+995,data/raw/fma_small/000/000995.mp3,Experimental,No Good Deed Goes Unpunished,Kevin Shields,The Death of Patience,training,small
+997,data/raw/fma_small/000/000997.mp3,Experimental,Nothing's Ever Ending,Kevin Shields,The Death of Patience,training,small
+998,data/raw/fma_small/000/000998.mp3,Experimental,Apparently,Kevin Shields,The Death of Patience,training,small
+1066,data/raw/fma_small/001/001066.mp3,Experimental,Helicopter de Cristal,Lucky Dragons,Norteñas,test,small
+1069,data/raw/fma_small/001/001069.mp3,Experimental,Un Lagrima en la Discoteca,Lucky Dragons,Norteñas,test,small
+1073,data/raw/fma_small/001/001073.mp3,Experimental,Onda Tocadisco,Lucky Dragons,Norteñas,test,small
+140,data/raw/fma_small/000/000140.mp3,Folk,Queen Of The Wires,Alec K. Redfearn & the Eyesores,The Blind Spot,training,small
+141,data/raw/fma_small/000/000141.mp3,Folk,Ohio,Alec K. Redfearn & the Eyesores,Every Man For Himself,training,small
+190,data/raw/fma_small/000/000190.mp3,Folk,Castle Of Stars,Ed Askew,Blue Piano,training,small
+193,data/raw/fma_small/000/000193.mp3,Folk,Here With You,Ed Askew,Blue Piano,training,small
+194,data/raw/fma_small/000/000194.mp3,Folk,All I want to Do,Ed Askew,Blue Piano,training,small
+197,data/raw/fma_small/000/000197.mp3,Folk,Piano 2,Ed Askew,Blue Piano,training,small
+200,data/raw/fma_small/000/000200.mp3,Folk,Baby Come Home,Ed Askew,Blue Piano,training,small
+203,data/raw/fma_small/000/000203.mp3,Folk,Song For R,Ed Askew,Blue Piano,training,small
+204,data/raw/fma_small/000/000204.mp3,Folk,My Dream,Ed Askew,Blue Piano,training,small
+207,data/raw/fma_small/000/000207.mp3,Folk,Piano 3,Ed Askew,Blue Piano,training,small
+2,data/raw/fma_small/000/000002.mp3,Hip-Hop,Food,AWOL,AWOL - A Way Of Life,training,small
+5,data/raw/fma_small/000/000005.mp3,Hip-Hop,This World,AWOL,AWOL - A Way Of Life,training,small
+676,data/raw/fma_small/000/000676.mp3,Hip-Hop,The Tension,Fanatic,Change Thoughts (radio edit),training,small
+694,data/raw/fma_small/000/000694.mp3,Hip-Hop,Planet Say (featuring Faust),Food For Animals,mp3 single with Faust,training,small
+695,data/raw/fma_small/000/000695.mp3,Hip-Hop,Elephants,Food For Animals,Cock Rock Disco 2006 Free Compilation,training,small
+4682,data/raw/fma_small/004/004682.mp3,Hip-Hop,Asylum (Permanent Underclass),Dälek,Live at WFMU on Mike's Show on 9/25/2004,training,small
+4684,data/raw/fma_small/004/004684.mp3,Hip-Hop,Eyes to Form Shadows,Dälek,Live at WFMU on Mike's Show on 9/25/2004,training,small
+4685,data/raw/fma_small/004/004685.mp3,Hip-Hop,Ever Somber,Dälek,Live at WFMU on Mike's Show on 9/25/2004,training,small
+4688,data/raw/fma_small/004/004688.mp3,Hip-Hop,Culture for Dollars,Dälek,Live at WFMU on Mike's Show on 9/25/2004,training,small
+5264,data/raw/fma_small/005/005264.mp3,Hip-Hop,Classical Homicide,Dälek,Live at WFMU on Mike's Show on 7/11/2002,training,small
+10250,data/raw/fma_small/010/010250.mp3,Instrumental,Tree Symphony,JayDee,Free Matter for the Blind Volume 6: Mysterious Worldz (Light Side),test,small
+11638,data/raw/fma_small/011/011638.mp3,Instrumental,Romantic Neck Tattoo,Embarker,Dis-adelphia,training,small
+14568,data/raw/fma_small/014/014568.mp3,Instrumental,Monkey Dance,Ergo Phizmiz,"Music from ""The House of Dr Faustus""",training,small
+14569,data/raw/fma_small/014/014569.mp3,Instrumental,Gretchen's Tango,Ergo Phizmiz,"Music from ""The House of Dr Faustus""",training,small
+14570,data/raw/fma_small/014/014570.mp3,Instrumental,So Wunsch Ich Dir,Ergo Phizmiz,"Music from ""The House of Dr Faustus""",training,small
+14571,data/raw/fma_small/014/014571.mp3,Instrumental,Through the Doors of the Circus,Ergo Phizmiz,"Music from ""The House of Dr Faustus""",training,small
+14572,data/raw/fma_small/014/014572.mp3,Instrumental,David Niven Death Dance,Ergo Phizmiz,"Music from ""The House of Dr Faustus""",training,small
+14576,data/raw/fma_small/014/014576.mp3,Instrumental,Funeral March For A Marionette,Ergo Phizmiz,"Music from ""The House of Dr Faustus""",training,small
+14577,data/raw/fma_small/014/014577.mp3,Instrumental,Garden Theme,Ergo Phizmiz,"Music from ""The House of Dr Faustus""",training,small
+14578,data/raw/fma_small/014/014578.mp3,Instrumental,Vespers,Ergo Phizmiz,"Music from ""The House of Dr Faustus""",training,small
+666,data/raw/fma_small/000/000666.mp3,International,Heat,Explode Into Colors,summer 2008 demos,training,small
+667,data/raw/fma_small/000/000667.mp3,International,Sharpen The Knife,Explode Into Colors,summer 2008 demos,training,small
+704,data/raw/fma_small/000/000704.mp3,International,Mano De Dios,Fósforo,Macondo,test,small
+705,data/raw/fma_small/000/000705.mp3,International,Tio Cocodrilo,Fósforo,Macondo,test,small
+706,data/raw/fma_small/000/000706.mp3,International,Esto Es Califas,Fósforo,Macondo,test,small
+707,data/raw/fma_small/000/000707.mp3,International,Cochabamba,Fósforo,Macondo,test,small
+708,data/raw/fma_small/000/000708.mp3,International,Desconocido,Fósforo,Macondo,test,small
+709,data/raw/fma_small/000/000709.mp3,International,Cumbia De Obama,Fósforo,Macondo,test,small
+853,data/raw/fma_small/000/000853.mp3,International,Welsinsni Melodyi,Hutzl Ukranian Ensemble,Black Mirror: Reflections In Global Musics (1915-1955),training,small
+1082,data/raw/fma_small/001/001082.mp3,International,Nam Nhi-tu,M. Nguyen Van Minh-Con,Black Mirror: Reflections In Global Musics (1915-1955),training,small
+10,data/raw/fma_small/000/000010.mp3,Pop,Freeway,Kurt Vile,Constant Hitmaker,training,small
+213,data/raw/fma_small/000/000213.mp3,Pop,Boute,Au,Au,training,small
+821,data/raw/fma_small/000/000821.mp3,Pop,Sir,Hecuba,"Sir 12"" EP",training,small
+822,data/raw/fma_small/000/000822.mp3,Pop,Tom & Jerry,Hecuba,"Sir 12"" EP",training,small
+1642,data/raw/fma_small/001/001642.mp3,Pop,Hrz,So Cow,Wackity Schmackity Doo,training,small
+1644,data/raw/fma_small/001/001644.mp3,Pop,Outskirts,So Cow,Wackity Schmackity Doo,training,small
+1649,data/raw/fma_small/001/001649.mp3,Pop,Inis Meain,So Cow,Wackity Schmackity Doo,training,small
+1661,data/raw/fma_small/001/001661.mp3,Pop,Only Fools and Horses Theme,So Cow,Wackity Schmackity Doo,training,small
+1663,data/raw/fma_small/001/001663.mp3,Pop,So High,Softboiled Eggies,Egg Soldiers,training,small
+1666,data/raw/fma_small/001/001666.mp3,Pop,She Fell Through the Trees,Softboiled Eggies,Egg Soldiers,training,small
+182,data/raw/fma_small/000/000182.mp3,Rock,Jules Lost His Jewels,Ariel Pink's Haunted Graffiti,Worn Copy,test,small
+255,data/raw/fma_small/000/000255.mp3,Rock,We Want to be Old,Bird Names,On Opaque Things,training,small
+256,data/raw/fma_small/000/000256.mp3,Rock,Toggle,Black Elk,Black Elk,training,small
+368,data/raw/fma_small/000/000368.mp3,Rock,Vampires,Blah Blah Blah,30th Anniversary Blah Blah Blah,training,small
+459,data/raw/fma_small/000/000459.mp3,Rock,Machines and Muscles,CAVE,Butthash,validation,small
+574,data/raw/fma_small/000/000574.mp3,Rock,Caliente Queen,Clockcleaner,Babylon Rules,training,small
+690,data/raw/fma_small/000/000690.mp3,Rock,Cataclysm,Flying Luttenbachers,Cataclysm,validation,small
+777,data/raw/fma_small/000/000777.mp3,Rock,Relaxing,Glove Compartment,Quickies,training,small
+825,data/raw/fma_small/000/000825.mp3,Rock,Death March,Here Comes A Big Black Cloud!!,Pompeii,training,small
+993,data/raw/fma_small/000/000993.mp3,Rock,Or So I've Been Told,Jad Fair and Jason Willett,The Sounds of Megaphone Unlimited,validation,small
