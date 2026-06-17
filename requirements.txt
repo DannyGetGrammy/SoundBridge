@@ -31,6 +31,3 @@ python-multipart>=0.0.9,<1.0
 pytest>=8.0,<9.0
 httpx>=0.26,<1.0
 
-# Optional acceleration for baseline indexing/search.
-# The code automatically falls back to NumPy cosine similarity if FAISS is unavailable.
-# faiss-cpu>=1.7.4,<2.0

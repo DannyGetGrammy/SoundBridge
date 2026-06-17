@@ -35,7 +35,6 @@ outputs/logs/
 outputs/analysis/
 
 # Generated analysis docs
-src/generate_qualitative_analysis.py
 docs/qualitative_analysis.md
 docs/final_report_assets/qualitative_examples/
 
