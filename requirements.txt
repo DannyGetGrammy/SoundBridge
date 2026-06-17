@@ -1,21 +1,36 @@
-numpy
-pandas
-scipy
-librosa
-soundfile
-tqdm
-matplotlib
-seaborn
-scikit-learn
-joblib
-faiss-cpu
-torch
-transformers
-accelerate
-streamlit
-fastapi
-uvicorn
-python-multipart
-requests
-pytest
-httpx
+# Core data processing
+numpy>=1.23,<2.0
+pandas>=1.5,<3.0
+scipy>=1.10,<1.14
+tqdm>=4.64,<5.0
+
+# Audio preprocessing, feature extraction, and visualization
+librosa>=0.10.1,<0.11
+soundfile>=0.12,<0.14
+matplotlib>=3.7,<3.10
+
+# Handcrafted baseline retrieval
+scikit-learn>=1.3,<1.6
+joblib>=1.3,<2.0
+
+# CLAP audio-text embeddings
+torch>=2.0,<3.0
+transformers>=4.39,<5.0
+accelerate>=0.27,<2.0
+
+# Streamlit demo
+streamlit>=1.32,<2.0
+requests>=2.31,<3.0
+
+# FastAPI backend
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.27,<1.0
+python-multipart>=0.0.9,<1.0
+
+# Tests
+pytest>=8.0,<9.0
+httpx>=0.26,<1.0
+
+# Optional acceleration for baseline indexing/search.
+# The code automatically falls back to NumPy cosine similarity if FAISS is unavailable.
+# faiss-cpu>=1.7.4,<2.0
