@@ -18,10 +18,10 @@ This repository has two apps:
 5. Branch: `main` (or `feature/public-streamlit-demo` while reviewing).
 6. Main file path: `demo/public_app.py`.
 7. In **Advanced settings**, choose Python 3.11 if available.
-8. This app uses its own minimal dependency list: `requirements-demo.txt`. To ensure Streamlit Cloud detects it, configure the app's dependency path to `requirements-demo.txt` when that setting is available. If the platform automatically selects root `requirements.txt`, prefer a standalone deployment branch with the demo's three dependencies in root `requirements.txt`; otherwise it may install the heavy training stack and fail resource limits.
+8. Streamlit Cloud automatically picks `demo/requirements.txt` because it is adjacent to the entrypoint. This lightweight dependency set overrides the root training dependencies.
 9. Click **Deploy** and wait for the platform to show a healthy app and assigned `*.streamlit.app` URL. Add the exact resulting URL to the GitHub README and your CV.
 
-**Cloud dependencies note:** Community Cloud searches for recognized dependency files and may favor an existing root `requirements.txt`. It is safest to deploy from a standalone demo branch/root with a minimal `requirements.txt`. The repository's full `requirements.txt` installs heavyweight torch/transformers and the broader research stack even though the public showcase does not need them.
+**Cloud dependencies note:** Community Cloud searches the entrypoint directory before the repository root, so `demo/requirements.txt` is chosen for `demo/public_app.py`. The heavyweight root requirements are intentionally not installed for the showcase.
 
 ## Enable model-backed audio retrieval later
 
