@@ -1,0 +1,4 @@
+# Community Cloud installs dependency files from the entrypoint directory first.
+streamlit>=1.40,<2.0
+numpy>=1.26,<2.0
+pandas>=2.0,<3.0
