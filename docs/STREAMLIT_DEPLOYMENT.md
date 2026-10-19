@@ -4,10 +4,10 @@
 
 This repository has two apps:
 
-- `demo/public_app.py` — lightweight public research showcase, designed to work without private/large generated artifacts. Its dataset catalog and methods/results pages work immediately. Model-backed retrieval activates only when indexes exist.
+- `demo/public_app.py` — lightweight public research showcase. The dataset browser and research pages work immediately. Audio-to-audio DSP retrieval rebuilds its real feature index from the committed `data/features_audio.csv` and ordered IDs, without extra heavy dependencies. CLAP retrieval still requires external artifacts.
 - `demo/streamlit_app.py` — original full local research prototype, requiring generated indexes and processed audio.
 
-**Important:** The public app does not pretend to run CLAP when indexes are missing. Music metadata filtering is separate from semantic similarity retrieval.
+**Important:** The 64-D baseline index is reconstructed from the actual FMA feature CSV by z-score standardization and L2 normalization (the original pipeline). The public app does not pretend to run CLAP when its index is missing. Music metadata filtering is separate from semantic similarity retrieval.
 
 ## Deploy to Streamlit Community Cloud
 
@@ -27,7 +27,7 @@ This repository has two apps:
 
 Generate the following assets locally using the README pipeline and supply them to your deployment environment:
 
-- Baseline: `models/baseline/feature_matrix_normalized.npy` plus `models/baseline/track_ids.json`.
+- Baseline: already functional via `data/features_audio.csv` plus `models/baseline/track_ids.json`. Optionally provide `models/baseline/feature_matrix_normalized.npy` to bypass on-the-fly reconstruction.
 - CLAP audio: `models/clap/clap_audio_embeddings.npy` plus `models/clap/clap_track_ids.json`.
 
 Ensure embedding rows match the corresponding ordered track IDs and have compatible dimensions. The published dataset metadata lives at `data/metadata_processed.csv`.
@@ -41,7 +41,7 @@ To enable audio playback supply the original, appropriately licensed clips at ea
 - Overview loads with 80 songs and 8 genres.
 - Dataset browser filters real metadata by title, artist and genre.
 - Methods & results reports original README benchmark, not a newly run evaluation.
-- Unavailable indexes are explicitly labeled, not replaced with fake results.
+- DSP audio-to-audio similarity uses real standardized 64-D vectors from the committed dataset; test ranked results and cosine scores. Missing CLAP embeddings are explicitly labeled, not replaced with fake results.
 - GitHub link works.
 - Once real artifacts are provisioned, audio-to-audio searches return similarity scores.
 - Once dependencies and model artifacts are provisioned, text queries produce CLAP results on CPU.
