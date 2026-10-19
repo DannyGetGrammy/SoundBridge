@@ -14,6 +14,18 @@ The project also includes:
 - a SQLite metadata/search-log layer
 - retrieval evaluation and qualitative analysis
 
+## Live Project Website
+
+**[SoundBridge — Public Research Demo](https://soundbridge.streamlit.app/)**
+
+The Streamlit research showcase includes an interactive FMA metadata browser,
+project overview, technical methodology, and published evaluation summary.
+The public GitHub repository intentionally excludes the large generated embedding
+matrices and audio clips, so **live model-backed search and audio playback need
+additional artifacts** before they can be enabled on the hosted app.
+
+See [public deployment setup](docs/STREAMLIT_DEPLOYMENT.md) for details.
+
 ## Project Repository
 
 https://github.com/DannyGetGrammy/SoundBridge
