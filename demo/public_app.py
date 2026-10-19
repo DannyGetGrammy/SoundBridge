@@ -21,6 +21,7 @@ import streamlit as st
 ROOT = Path(__file__).resolve().parents[1]
 METADATA = ROOT / "data" / "metadata_processed.csv"
 BASELINE_INDEX = ROOT / "models" / "baseline" / "feature_matrix_normalized.npy"
+BASELINE_FEATURES_CSV = ROOT / "data" / "features_audio.csv"
 BASELINE_IDS = ROOT / "models" / "baseline" / "track_ids.json"
 CLAP_INDEX = ROOT / "models" / "clap" / "clap_audio_embeddings.npy"
 CLAP_IDS = ROOT / "models" / "clap" / "clap_track_ids.json"
@@ -82,8 +83,38 @@ def catalog() -> pd.DataFrame:
 
 @st.cache_data(show_spinner=False)
 def index_data(index_path: str, ids_path: str) -> tuple[np.ndarray, list[int]]:
-    matrix = np.load(index_path).astype(np.float32)
     ids = [int(value) for value in json.loads(Path(ids_path).read_text(encoding="utf-8"))]
+    path = Path(index_path)
+    if path.is_file():
+        matrix = np.load(path).astype(np.float32)
+    elif path == BASELINE_INDEX and BASELINE_FEATURES_CSV.is_file():
+        # Reconstruct the original 64-D DSP index directly from the committed
+        # feature CSV. This uses the same StandardScaler (ddof=0) followed by
+        # L2 normalization as src/build_baseline_index.py, without sklearn.
+        features = pd.read_csv(BASELINE_FEATURES_CSV)
+        if "track_id" not in features:
+            raise ValueError("Baseline feature CSV lacks track_id.")
+        csv_ids = pd.to_numeric(features["track_id"], errors="raise").astype(int).tolist()
+        if csv_ids != ids or len(set(ids)) != len(ids):
+            raise ValueError("Feature CSV and ordered track IDs are not aligned.")
+        feature_columns = [
+            col for col in features.columns
+            if col not in ("track_id", "genre", "processed_path")
+        ]
+        if len(feature_columns) != 64:
+            raise ValueError(f"Expected 64 audio features; found {len(feature_columns)}.")
+        matrix = features[feature_columns].to_numpy(dtype=np.float32)
+        if not np.isfinite(matrix).all():
+            raise ValueError("Baseline feature CSV contains non-finite feature values.")
+        # Use float64 moments for stable standardization, then float32 vectors.
+        working = matrix.astype(np.float64)
+        mean = working.mean(axis=0)
+        scale = working.std(axis=0)
+        scale[scale == 0.0] = 1.0
+        matrix = ((working - mean) / scale).astype(np.float32)
+    else:
+        raise FileNotFoundError(f"Retrieval index unavailable: {index_path}")
+
     if matrix.ndim != 2 or matrix.shape[0] != len(ids):
         raise ValueError("Index dimensions do not match track IDs.")
     norms = np.linalg.norm(matrix, axis=1, keepdims=True)
@@ -92,7 +123,11 @@ def index_data(index_path: str, ids_path: str) -> tuple[np.ndarray, list[int]]:
 
 
 def has_index(index_path: Path, ids_path: Path) -> bool:
-    return index_path.is_file() and ids_path.is_file()
+    if not ids_path.is_file():
+        return False
+    return index_path.is_file() or (
+        index_path == BASELINE_INDEX and BASELINE_FEATURES_CSV.is_file()
+    )
 
 
 def score_results(matrix: np.ndarray, ids: list[int], query: np.ndarray,
@@ -232,9 +267,9 @@ def intro() -> None:
     )
     st.info(
         "This public showcase includes a working dataset browser and research results. "
-        "The repository excludes generated audio and model indexes; live model-backed "
-        "retrieval becomes available when those assets are provisioned. "
-        "No mock CLAP results are presented."
+        "The handcrafted DSP audio-to-audio index is rebuilt from the public "
+        "64-feature CSV when needed. CLAP semantic search and audio playback "
+        "still require separate model/audio assets; no mock results are shown."
     )
 
 
@@ -431,7 +466,7 @@ def main() -> None:
         st.link_button("GitHub repository ↗", REPO_URL, use_container_width=True)
         with st.expander("Deployment status"):
             st.write("Catalog:", "Ready" if METADATA.exists() else "Missing")
-            st.write("DSP index:", "Ready" if has_index(BASELINE_INDEX, BASELINE_IDS) else "Not installed")
+            st.write("DSP index:", "Ready (CSV fallback)" if has_index(BASELINE_INDEX, BASELINE_IDS) and not BASELINE_INDEX.is_file() else ("Ready" if has_index(BASELINE_INDEX, BASELINE_IDS) else "Not installed"))
             st.write("CLAP index:", "Ready" if has_index(CLAP_INDEX, CLAP_IDS) else "Not installed")
 
     if page == "Overview":
