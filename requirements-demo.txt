@@ -1,0 +1,4 @@
+# Lean public showcase dependencies. The full local research pipeline uses requirements.txt.
+streamlit>=1.40,<2.0
+numpy>=1.26,<2.0
+pandas>=2.0,<3.0
